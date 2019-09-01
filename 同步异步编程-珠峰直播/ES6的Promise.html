@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES6中的Promise</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+            --Promise
+            p是Promise的一个实例
+            Promise有三个状态：pedding、fulfilled、rejected， 一旦状态发生改变，就会凝固
+            
+        */
+        // console.log(Promise)
+
+        console.log(100)
+        let p = new Promise(function (resolve, reject) {
+            resolve();
+            // reject();
+            console.log(200);
+            console.log(a);
+        });
+        p.then(function () {
+            console.log('success');
+        }, function () {
+            console.log('fail');
+        });
+        console.log(300);
+        // console.log(p);
+
+        /*
+            在then中的函数中如果抛出异常，或是报错，浏览器不会报错，而是直接走reject
+            Promise将多个异步的改成同步的
+            then的执行是同步的
+        */
+    </script>
+</body>
+</html>
